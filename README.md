@@ -11,3 +11,7 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat ignition deploy ./ignition/modules/Lock.js
 ```
+
+
+Contract address 0x0B92B74e9e19228FE45FD7ab49b75b4ee5D0d483
+https://scrollscan.com/address/0x0B92B74e9e19228FE45FD7ab49b75b4ee5D0d483
