@@ -74,7 +74,7 @@ const profiles = [
   },
 ];
 
-export const ProfileCard = ({ address, index }: any) => {
+export const ProfileCard = ({ address, index, handlePrevious, handleNext }: any) => {
   const { writeContract } = useWriteContract();
 
   const user = profiles[index];
@@ -115,6 +115,7 @@ export const ProfileCard = ({ address, index }: any) => {
             bg="black"
             color="white"
             mr={4}
+            onClick={handlePrevious}
           />
           <IconButton
             aria-label="Like"
@@ -123,14 +124,7 @@ export const ProfileCard = ({ address, index }: any) => {
             isRound
             bg="#DA5C3F"
             color="white"
-            onClick={() =>
-              writeContract({
-                address: "0x0B92B74e9e19228FE45FD7ab49b75b4ee5D0d483",
-                abi: abi.abi,
-                functionName: "like",
-                args: [address, parseEther("0.0001")],
-              })
-            }
+            onClick={handleNext}
           />
         </Flex>
         <Box gap={4} flexDir={'column'} >

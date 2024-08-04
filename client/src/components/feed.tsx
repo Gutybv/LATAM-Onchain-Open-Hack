@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAccount, useReadContract, useWriteContract } from "wagmi";
 import abi from "../abi/abi.json";
-import { Stack } from "@chakra-ui/react";
+import { Button, Stack } from "@chakra-ui/react";
 import { ProfileCard } from "./profileCard";
-
 
 export const Feed = () => {
   const { data: getRegisteredUsers } = useReadContract({
@@ -14,6 +13,26 @@ export const Feed = () => {
 
   const account = useAccount();
   const { writeContract } = useWriteContract();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    if (getRegisteredUsers) {
+      setCurrentIndex(
+        (prevIndex) =>
+          (prevIndex + 1) % (getRegisteredUsers as Array<string>).length
+      );
+    }
+  };
+
+  const handlePrevious = () => {
+    if (getRegisteredUsers) {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0
+          ? (getRegisteredUsers as Array<string>).length - 1
+          : prevIndex - 1
+      );
+    }
+  };
 
   useEffect(() => {
     if (account.address && getRegisteredUsers) {
@@ -27,17 +46,16 @@ export const Feed = () => {
     }
   }, [getRegisteredUsers]);
 
-
-
   return (
     <Stack align={"center"}>
-      {getRegisteredUsers &&
-        //@ts-ignore
-        getRegisteredUsers.map((data: any, index: any) => (
-          <Stack key={index}>
-            <ProfileCard address={data} index={index}/>
-          </Stack>
-        ))}
+      {getRegisteredUsers ? (getRegisteredUsers as Array<string>).length > 0 && (
+        <ProfileCard
+          address={(getRegisteredUsers as Array<string>)[currentIndex]}
+          index={currentIndex}
+          handlePrevious={handlePrevious}
+          handleNext={handleNext}
+        />
+      ) : null}
     </Stack>
   );
 };
