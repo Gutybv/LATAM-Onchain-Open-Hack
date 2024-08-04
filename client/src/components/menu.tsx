@@ -1,6 +1,8 @@
 // components/MobileMenu.js
 import { Box, IconButton, Flex } from '@chakra-ui/react';
+import Link from 'next/link';
 import { FaMoneyCheck, FaHandshake, FaHeart, FaComment } from 'react-icons/fa';
+import { CgProfile } from "react-icons/cg";
 
 const MobileMenu = () => {
   return (
@@ -41,12 +43,14 @@ const MobileMenu = () => {
         colorScheme="pink"
       />
       <IconButton
-        icon={<FaComment />}
-        aria-label="Comment"
+        icon={<CgProfile />}
+        aria-label="Profile"
         variant="ghost"
         size="lg"
         isRound
         colorScheme="pink"
+        as={Link}
+        href={'/profile'}
       />
     </Flex>
   );
