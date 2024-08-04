@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useAccount, useReadContract, useWriteContract } from "wagmi";
+import {
+  useAccount,
+  useReadContract,
+  useWatchContractEvent,
+  useWriteContract,
+} from "wagmi";
 import abi from "../abi/abi.json";
 import { Button, Stack } from "@chakra-ui/react";
 import { ProfileCard } from "./profileCard";
@@ -44,18 +49,20 @@ export const Feed = () => {
         });
       }
     }
-  }, [getRegisteredUsers]);
+  }, []);
 
   return (
     <Stack align={"center"}>
-      {getRegisteredUsers ? (getRegisteredUsers as Array<string>).length > 0 && (
-        <ProfileCard
-          address={(getRegisteredUsers as Array<string>)[currentIndex]}
-          index={currentIndex}
-          handlePrevious={handlePrevious}
-          handleNext={handleNext}
-        />
-      ) : null}
+      {getRegisteredUsers
+        ? (getRegisteredUsers as Array<string>).length > 0 && (
+            <ProfileCard
+              address={(getRegisteredUsers as Array<string>)[currentIndex]}
+              index={currentIndex}
+              handlePrevious={handlePrevious}
+              handleNext={handleNext}
+            />
+          )
+        : null}
     </Stack>
   );
 };
