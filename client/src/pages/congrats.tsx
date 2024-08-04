@@ -2,6 +2,7 @@ import { NextPage } from "next";
 
 import { Box, VStack, Circle, Text, Button } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
+import Link from "next/link";
 
 const Congrats: NextPage = () => {
 
@@ -29,6 +30,8 @@ const Congrats: NextPage = () => {
    color={'white'}
         borderRadius="full"
         mt={4}
+        as={Link}
+        href={'/'}
       >
         Go to Home
       </Button>
