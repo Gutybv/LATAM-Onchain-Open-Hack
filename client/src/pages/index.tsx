@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useAccount } from "wagmi";
 import { Feed } from "../components/feed";
 import { HStack, Stack } from "@chakra-ui/react";
+import MobileMenu from "../components/menu";
 
 const Home: NextPage = () => {
   const account = useAccount();
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
       </HStack>
 
       <Feed />
+      <MobileMenu />
     </Stack>
   );
 };

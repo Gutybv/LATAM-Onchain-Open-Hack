@@ -39,15 +39,12 @@ const profiles = [
     badges: [
       {
         text: "Trusted Developer",
-
       },
       {
         text: "Builder Score 150 pts",
-   
       },
       {
         text: "Based hacks 5 projects",
-   
       },
     ],
     interest: "Blockchain enthusiast",
@@ -59,20 +56,86 @@ const profiles = [
     badges: [
       {
         text: "Innovative Thinker",
-      
       },
       {
         text: "Builder Score 200 pts",
-   
       },
       {
         text: "Based hacks 3 projects",
-   
       },
     ],
     interest: "Tech entrepreneur",
   },
+  {
+    name: "carol.eth",
+    location: "Los Angeles",
+    avatarUrl: "image4.png",
+    badges: [
+      {
+        text: "Crypto Pioneer",
+      },
+      {
+        text: "Builder Score 180 pts",
+      },
+      {
+        text: "Based hacks 4 projects",
+      },
+    ],
+    interest: "DeFi strategist",
+  },
+  {
+    name: "dave.eth",
+    location: "Seattle",
+    avatarUrl: "image5.png",
+    badges: [
+      {
+        text: "Blockchain Guru",
+      },
+      {
+        text: "Builder Score 160 pts",
+      },
+      {
+        text: "Based hacks 6 projects",
+      },
+    ],
+    interest: "Smart contract developer",
+  },
+  {
+    name: "eve.eth",
+    location: "Austin",
+    avatarUrl: "image6.png",
+    badges: [
+      {
+        text: "Ethereum Expert",
+      },
+      {
+        text: "Builder Score 140 pts",
+      },
+      {
+        text: "Based hacks 3 projects",
+      },
+    ],
+    interest: "NFT artist",
+  },
+  {
+    name: "frank.eth",
+    location: "Chicago",
+    avatarUrl: "image7.png",
+    badges: [
+      {
+        text: "Web3 Visionary",
+      },
+      {
+        text: "Builder Score 130 pts",
+      },
+      {
+        text: "Based hacks 7 projects",
+      },
+    ],
+    interest: "Crypto investor",
+  },
 ];
+
 
 export const ProfileCard = ({ address, index, handlePrevious, handleNext }: any) => {
   const { writeContract } = useWriteContract();
