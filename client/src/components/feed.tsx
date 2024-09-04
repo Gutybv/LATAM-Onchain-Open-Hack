@@ -11,7 +11,7 @@ import { ProfileCard } from "./profileCard";
 
 export const Feed = () => {
   const { data: getRegisteredUsers } = useReadContract({
-    address: "0x0B92B74e9e19228FE45FD7ab49b75b4ee5D0d483",
+    address: "0x135b2718Cac2b5fD3d7158Fe962c038B126209B3",
     abi: abi.abi,
     functionName: "getRegisteredUsers",
   });
@@ -44,7 +44,7 @@ export const Feed = () => {
       if (!(getRegisteredUsers as Array<string>).includes(account.address)) {
         writeContract({
           abi: abi.abi,
-          address: "0x0B92B74e9e19228FE45FD7ab49b75b4ee5D0d483",
+          address: "0x135b2718Cac2b5fD3d7158Fe962c038B126209B3",
           functionName: "register",
         });
       }

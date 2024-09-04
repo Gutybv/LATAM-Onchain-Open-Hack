@@ -24,8 +24,8 @@ const Home: NextPage = () => {
       align={"center"}
       gap={4}
     >
-      <Heading color={"#DA5C3F"}>Registration</Heading>
-      <Text color={"#C56666"}>Find builders, network, and ship cool stuff</Text>
+      <Heading color={"#1652F0"}>Registration</Heading>
+      <Text color={"#1652F0"}>Find builders, network, and ship cool stuff</Text>
  
     </Stack>
   );

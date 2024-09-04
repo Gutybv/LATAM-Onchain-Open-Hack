@@ -18,13 +18,21 @@ const MobileMenu = () => {
       zIndex="10"
       pb={4}
     >
+        <IconButton
+        icon={<FaHeart />}
+        aria-label="Heart"
+        variant="ghost"
+        size="lg"
+        isRound
+        colorScheme="blue"
+      />
       <IconButton
         icon={<FaMoneyCheck />}
         aria-label="Money"
         variant="ghost"
         size="lg"
         isRound
-        colorScheme="red"
+        colorScheme="blue"
       />
       <IconButton
         icon={<FaHandshake />}
@@ -32,23 +40,16 @@ const MobileMenu = () => {
         variant="ghost"
         size="lg"
         isRound
-        colorScheme="pink"
+        colorScheme="blue"
       />
-      <IconButton
-        icon={<FaHeart />}
-        aria-label="Heart"
-        variant="ghost"
-        size="lg"
-        isRound
-        colorScheme="pink"
-      />
+    
       <IconButton
         icon={<CgProfile />}
         aria-label="Profile"
         variant="ghost"
         size="lg"
         isRound
-        colorScheme="pink"
+        colorScheme="blue"
         as={Link}
         href={'/profile'}
       />

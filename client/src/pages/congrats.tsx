@@ -10,7 +10,7 @@ const Congrats: NextPage = () => {
   return (
     <Box h="100vh" bg="white" p={4}>
     <VStack spacing={6} align="center" justify="center" h="full">
-      <Circle size="100px" bg="#DA5C3F">
+      <Circle size="100px" bg="#1652F0">
         <CheckIcon color="white" boxSize={10} />
       </Circle>
       
@@ -26,7 +26,7 @@ const Congrats: NextPage = () => {
       </Text>
       
       <Button 
-  background={"#DA5C3F"}
+  background={"#1652F0"}
    color={'white'}
         borderRadius="full"
         mt={4}

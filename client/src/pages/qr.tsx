@@ -18,7 +18,7 @@ const Qr: NextPage = () => {
   return (
     <Box
     h="100vh"
-    bg="#DA5C3F"
+    bg="#1652F0"
     position="relative"
     color="white"
     overflow="hidden"
@@ -69,7 +69,7 @@ const Qr: NextPage = () => {
         size="lg"
         colorScheme="whiteAlpha"
         bg="white"
-        color="orange.500"
+        color="#1652F0"
         borderRadius="full"
         px="8"
         shadow="lg"

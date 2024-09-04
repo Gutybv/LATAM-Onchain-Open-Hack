@@ -18,9 +18,9 @@ const Home: NextPage = () => {
     const { openConnectModal } = useConnectModal();
   return (
     <Stack width={"100%"} height={"100vh"} justifyContent={'center'} align={'center'} gap={4}>
-      <Heading color={"#DA5C3F"}>BUILDer</Heading>
-      <Text color={"#C56666"}>Find builders, network, and ship cool stuff</Text>
-   <Button onClick={openConnectModal} type="button" variant='outline' color={"#DA5C3F"} borderColor={'#DA5C3F'}>Connect Wallet</Button>
+      <Heading color={"#1652F0"}>BUILDer</Heading>
+      <Text color={"#1652F0"}>Find builders, network, and ship cool stuff</Text>
+   <Button onClick={openConnectModal} type="button" variant='outline' color={"#1652F0"} borderColor={'#1652F0'}>Connect Wallet</Button>
     </Stack>
   );
 };
